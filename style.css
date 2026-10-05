@@ -102,7 +102,13 @@ button:hover {
 }
 /* Search */
 #search-input {
+    width: 100%;
+    padding: 12px;
     margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: block;
 }
 
 /* Error message */
