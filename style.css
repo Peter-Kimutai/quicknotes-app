@@ -52,8 +52,9 @@ section h2 {
 /* Form */
 #note-form {
     display: flex;
+    flex-direction: column; /* This stacks them on top of each other */
     gap: 12px;
-    align-items: end;
+    align-items: stretch;   /* Makes them all full width */
 }
 
 #note-form div {
@@ -88,6 +89,17 @@ button:hover {
     background-color: #0f4f64;
 }
 
+/* Note Input */
+#note-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    min-height: 100px;
+}
 /* Search */
 #search-input {
     margin-bottom: 15px;
@@ -136,13 +148,15 @@ footer {
 
 /* Small screens */
 @media (max-width: 600px) {
-    #note-form {
-        flex-direction: column;
-        align-items: stretch;
+    main {
+        padding: 0 10px;
     }
 
-    #note-form div,
-    #note-form button {
-        width: 100%;
+    section {
+        padding: 18px;
+    }
+
+    header {
+        padding: 25px 15px;
     }
 }
